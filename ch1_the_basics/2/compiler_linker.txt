@@ -1,0 +1,2 @@
+A compiler takes source files as input, and generates one object file for each source file.
+A linker takes object files as input, and combines them generating a single executable file.

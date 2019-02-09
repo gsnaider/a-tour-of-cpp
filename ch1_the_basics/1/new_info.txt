@@ -1,0 +1,13 @@
+object file
+
+include vs namespace
+
+curly-brace initializer
+
+auto
+
+const
+    const vector<int>& vec --> can I change the values inside?
+constexpr
+
+references (int& param)
