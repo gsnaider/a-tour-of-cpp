@@ -1,0 +1,3 @@
+member initializer list
+
+Can I literally do the same in a struct as in a class (functions, constructor, operator[], destructor, etc.)?

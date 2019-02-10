@@ -1,1 +1,0 @@
-An invariant is a condition that always holds true during the execution of a program. This simplifies maintenance and debugging in a program, since the programmer can always assume the invariant is true, simplifying the scope of the analysis.

@@ -10,4 +10,6 @@ const
     const vector<int>& vec --> can I change the values inside?
 constexpr
 
+different ways to init arrays.
+
 references (int& param)
