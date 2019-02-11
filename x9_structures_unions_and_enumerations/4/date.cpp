@@ -13,7 +13,7 @@ struct Date {
 	Date(int y, Month m, int d) : year {y}, month {m}, day {d} {}
 };
 
-Date* read_date() {
+Date read_date() {
 	cout << "Year: ";
 	int year;
 	cin >> year;
@@ -29,16 +29,41 @@ Date* read_date() {
 
 	cout << year << "-" << month << "-" << day << "\n";
 
-	// Date d(year, static_cast<Month>(month), day);
-	return new Date(year, static_cast<Month>(month), day);
+	Date d(year, static_cast<Month>(month), day);
+	return d;
 }
 
-void print_date(const Date* date) {
-	cout << date->year << "-" << date->month << "-" << date->day << "\n";
+// Date* read_date() {
+// 	cout << "Year: ";
+// 	int year;
+// 	cin >> year;
+
+// 	cout << "Month: ";
+// 	int month;
+// 	cin >> month;
+		
+// 	cout << "Day: ";
+// 	int day;
+// 	cin >> day;
+
+
+// 	cout << year << "-" << month << "-" << day << "\n";
+
+// 	// Date d(year, static_cast<Month>(month), day);
+// 	return new Date(year, static_cast<Month>(month), day);
+// }
+
+void print_date(const Date& date) {
+	cout << date.year << "-" << date.month << "-" << date.day << "\n";
 }
+
+// void print_date(const Date* date) {
+// 	cout << date->year << "-" << date->month << "-" << date->day << "\n";
+// }
 
 int main () {
-	// Date date = read_date();
-	Date* date = read_date();
+	Date date = read_date();
+	
+	// Date* date = read_date();
 	print_date(date);
 }
