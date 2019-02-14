@@ -1,7 +1,8 @@
 #include <iostream>
 
 // Could use fptr in all fucntions.
-typedef void (*fptr)(char*, int&);
+// typedef void (*fptr)(char*, int&);
+using fptr  = void(*)(char*, int&);
 
 void f1(char* arg1 , int& arg2) {
 	std::cout << "In f1(" << arg2 << ")" << std::endl;
