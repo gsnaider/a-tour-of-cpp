@@ -1,0 +1,14 @@
+interface separated from implementation
+	.h vs .cpp
+	separated compilation
+
+namespaces
+	similar to java packages
+
+noexcept functions:
+	a function that doesn't throw an exception
+	if the function still throws an exception, std::termiante() is called
+
+static_assert(A, S)
+	prints S if A is not true
+	A must be known at compile time (constant expression)

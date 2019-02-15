@@ -1,0 +1,74 @@
+Concrete type:
+	its representation is part of its definition
+	java: normal classes
+
+	usually manipulated as built-in types
+
+advice: avoid naked new and delete statements. keep them buried inside abstractions
+
+std::initializer_list
+	Vector v {1,2,3,4}
+
+static_cast:
+	does not check the value being casted, programmer is trusted to do the right thing
+
+virtual
+	may be defined later in a class derived from this nne
+
+	virtual int size() const = 0
+
+	= 0: pure virtual: derived class MUST define the function
+
+class with a pure virtual function: abstract class
+
+abstract classes generally don't have a constructor
+	can they still have one?
+
+abstract classes generally have a virtual destructor
+	so that it is implemented by derived classes
+
+class my_class :public super_class
+	derived from/inherit/subtype of super_class
+
+~super_class() destructor is implicitly invoked by ~my_class()
+
+abstract types usually manipulated through pointers or references (can't instantiate an abstract type)
+
+
+override == Java's @Override
+
+delete invokes destructor of most derived class
+
+dynamic_cast similar to Java's instanceof
+	
+unique_ptr
+	owns the pointer
+	handles the delete when it goes out of scope
+
+
+
+Vector(const Vector& a); //copy constructor
+Vector& operator=(const Vector& a); //copy assignment
+
+Vector(Vector&& a); //move constructor
+Vector& operator=(Vector&& a);//move assingment
+
+lvalue: something that can appear on the left-hand side of an assignment.
+rvalue: a value you can't assign to.
+&&: rvalue reference: a reference to something that NOBODY ELSE can assign to.
+
+std::move()
+	what does it do exactly?
+
+
+explicit: avoids one-argument constructors conversion:
+	complex z1 = 3.14 // OK, is {3.14, 0.0}
+	Vector v = 7 // Not ok
+
+	should declare
+		explicit Vector(int s);
+
+<function>=delete
+	deletes the <function>
+	abstract classes delete default copy and move operators, so they are defined by sub-classes.
+

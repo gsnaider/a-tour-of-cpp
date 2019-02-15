@@ -1,5 +1,15 @@
 member initializer list
+	Vector(int s) : elem {new double[]} , sz{s} {}
+	Vector_container(int s) : v(s) {}
+
+	how does it work exactly? does it only allow to initialize members? Or can I execute any operation?
+
+operator[]
+operator++
+operator>>
+...
 
 Can I literally do the same in a struct as in a class (functions, constructor, operator[], destructor, etc.)?
 
 unions
+

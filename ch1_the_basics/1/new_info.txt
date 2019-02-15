@@ -7,8 +7,13 @@ curly-brace initializer
 auto
 
 const
+	value will not change
+
     const vector<int>& vec --> can I change the values inside?
+    	answer: no, I cannot call any funtion not defined as const.
+
 constexpr
+	to be evaluated at compile time
 
 different ways to init arrays.
 
