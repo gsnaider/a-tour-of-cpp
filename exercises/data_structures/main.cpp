@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stdexcept>
+#include "linked_list.h"
+
+using namespace std;
+
+int main() {
+
+	linked_list my_list;
+
+	my_list.add(2);
+
+	my_list.add(3.14);
+
+	my_list.add(54.23);
+
+	cout << "Size: " << my_list.size() << endl;
+
+	cout << "my_list[0]: " << my_list[0] << endl;
+	cout << "my_list[1]: " << my_list[1] << endl;
+	cout << "my_list[2]: " << my_list[2] << endl;
+
+	try {
+		cout << "my_list[3]: " << my_list[3] << endl;	
+	} catch (out_of_range& e) {
+		cout << "Exception while reading list" << endl;
+		cout << e.what() << endl;
+	}
+	
+}
