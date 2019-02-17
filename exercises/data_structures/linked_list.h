@@ -16,7 +16,7 @@ class linked_list : public container {
 public:
 	linked_list() : head_(nullptr), tail_(nullptr), size_(0) {};
 
-	// linked_list(const linked_list& original); // copy constructor.
+	linked_list(const linked_list& original); // copy constructor.
 
 	// linked_list(linked_list&& original); // move constructor
 

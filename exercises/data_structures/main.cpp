@@ -6,6 +6,18 @@ using namespace std;
 
 using my_containers::linked_list; // == import com.google.my.containers.linkedlist
 
+void func(linked_list list) {
+	cout << "Testing copy construct\n";
+	cout << "Size: " << list.size() << endl;
+	cout << list << endl;
+
+	cout << "Remove 2\n";
+	list.remove(2);
+
+	cout << "Size: " << list.size() << endl;
+	cout << list << endl;
+}
+
 int main() {
 
 	linked_list my_list;
@@ -36,6 +48,13 @@ int main() {
 	cout << "Size: " << my_list.size() << endl;
 	cout << my_list << endl;
 
+	func(my_list);
+
+	cout << "Size: " << my_list.size() << endl;
+	cout << my_list << endl;
+
+
+
 	cout << "Remove 1\n";
 	my_list.remove(1);
 
@@ -64,7 +83,7 @@ int main() {
 	while (my_list.size() > 0) {
 		my_list.remove(0);	
 	}
-	
+
 	cout << "Size: " << my_list.size() << endl;
 	cout << my_list << endl;
 

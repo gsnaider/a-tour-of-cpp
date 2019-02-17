@@ -10,6 +10,17 @@ using std::to_string;
 
 namespace my_containers {
 
+linked_list::linked_list(const linked_list& original) 
+	: head_(nullptr), tail_(nullptr), size_(0) {
+	if (original.size_ > 0) {
+		node* curr = original.head_;
+		while (curr) {
+			this->add(curr->value());
+			curr = curr->next();
+		}
+	}
+}
+
 void linked_list::add(double value) {
 	node* new_node = new node(value);
 
