@@ -25,7 +25,7 @@ abstract classes generally don't have a constructor
 	can they still have one?
 
 abstract classes generally have a virtual destructor
-	so that it is implemented by derived classes
+	so that the destructor called is the one from the subclass, and not the one from the parent class.
 
 class my_class :public super_class
 	derived from/inherit/subtype of super_class
