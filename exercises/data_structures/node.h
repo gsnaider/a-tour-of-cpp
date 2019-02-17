@@ -1,3 +1,6 @@
+#ifndef _NODE_H_
+#define _NODE_H_
+
 namespace my_containers {
 
 // could be a struct
@@ -24,3 +27,5 @@ private:
 };
 
 } // namespace my_containers
+
+#endif
