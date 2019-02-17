@@ -1,11 +1,17 @@
-
 #include "container.h"
 #include "node.h"
 
-class linked_list :public container {
+namespace my_containers {
+
+namespace {
+	// Lo de aca no se ve afuera
+	int local_var;
+}  // namespace
+
+class linked_list : public container {
 
 public:
-	linked_list() : head {nullptr}, tail {nullptr}, sz {0} {};
+	linked_list() : head_(nullptr), tail_(nullptr), size_(0) {};
 
 	linked_list(const linked_list& original); // copy constructor.
 
@@ -17,16 +23,21 @@ public:
 
 	void add(double elem) override;
 
-	// void remove(int i) override;
+	// void remove(int i) override; TODO
 
 	double& operator[](int i) override;
 
-	int size() const override {return this->sz;}
+	// This would allow to use the [] as const
+	// const double& operator[](int i) const override;
+
+	int size() const override {return size_;}
 
 	~linked_list();
 
 private:
-	node* head;
-	node* tail;
-	int sz;
+	node* head_;
+	node* tail_;
+	int size_;
 };
+
+}  // namespace my_containers

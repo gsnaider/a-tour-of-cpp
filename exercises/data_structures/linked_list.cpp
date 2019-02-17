@@ -1,17 +1,20 @@
-#include "linked_list.h"
 #include <stdexcept>
+#include "linked_list.h"
 
-using namespace std;
+using std::out_of_range;
+
+namespace my_containers {
 
 void linked_list::add(double value) {
 	node* new_node = new node(value);
+
 	if (size() == 0) {
-		head = new_node;
+		head_ = new_node;
 	} else {
-		tail->set_next(new_node);
+		tail_->next(new_node);
 	}
-	tail = new_node;
-	sz++;
+	tail_ = new_node;
+	++size_;
 }
 
 double& linked_list::operator[](int i) {
@@ -19,20 +22,21 @@ double& linked_list::operator[](int i) {
 		throw out_of_range {"linked_list.operator[]"};
 	}
 	// Due to the condition above, head must be initialized.
-	node* curr = head;
+	node* curr = head_;
 	while (i > 0) {
-		curr = curr->get_next();
-		i--;
+		curr = curr->next();
+		--i;
 	}
 	return curr->value();
-
 }
 
 linked_list::~linked_list() {
-	node* curr = head;
+	node* curr = head_;
 	while (curr) {
-		node* next = curr->get_next();
+		node* next = curr->next();
 		delete curr;
 		curr = next;
 	}
 }
+
+}  // namespace my_containers

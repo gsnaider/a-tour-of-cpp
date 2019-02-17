@@ -1,22 +1,26 @@
+namespace my_containers {
 
 // could be a struct
+
+// struct node_str {
+// 	double val;
+// 	node_str* next;
+// }
 
 class node {
 
 public:
-	node(double value) : val {value}, next {nullptr} {};
+	node(double value) : val_(value), next_(nullptr) {};
 
-	double& value() {return this->val;}
+	double& value() {return val_;}
 
-	node* get_next() {return next;}
+	node* next() {return next_;}
 
-	void set_next(node* next) {this->next = next;}
-
-	~node() {}
+	void next(node* next) {next_ = next;}
 
 private:
-
-	double val;
-	node* next;
-
+	double val_;
+	node* next_;
 };
+
+} // namespace my_containers

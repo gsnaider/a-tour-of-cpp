@@ -4,6 +4,8 @@
 
 using namespace std;
 
+using my_containers::linked_list; // == import com.google.my.containers.linkedlist
+
 int main() {
 
 	linked_list my_list;
@@ -26,5 +28,10 @@ int main() {
 		cout << "Exception while reading list" << endl;
 		cout << e.what() << endl;
 	}
+
+	my_list[1] = 234.54;
 	
+	cout << "my_list[0]: " << my_list[0] << endl;
+	cout << "my_list[1]: " << my_list[1] << endl;
+	cout << "my_list[2]: " << my_list[2] << endl;
 }
