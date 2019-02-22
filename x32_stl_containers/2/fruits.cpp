@@ -10,6 +10,17 @@ using std::string;
 using std::getline;
 using std::istringstream;
 
+void print_vector(const vector<string>& v) {
+	cout << "Vector: [";
+	if (v.size() > 0) {
+		for (auto x = v.begin(); x != v.end() - 1; ++x) {
+			cout << *x << ',';
+		}
+		cout << v.at(v.size() - 1);
+	}
+	cout << "]\n";
+}
+
 int main() {
 	vector<string> fruits;
 	string fruit_words;
@@ -24,11 +35,7 @@ int main() {
 		fruits.push_back(fruit);
 	}
 
-	for (auto x = fruits.begin(); x != fruits.end(); ++x) {
-		cout << *x << ' ';
-	}
-	cout << '\n';
-
+	print_vector(fruits);
 
 	cout << "Fruits starting with 'a'\n";
 	for (auto x = fruits.begin(); x != fruits.end(); ++x) {
@@ -37,4 +44,19 @@ int main() {
 		}
 	}
 	cout << '\n';
+
+
+	cout << "Deleting fruits starting with 'a'\n";
+	auto x = fruits.begin();
+	while (x != fruits.end()) {
+		if (x->at(0) == 'a') {
+			x = fruits.erase(x);
+		} else {
+			++x;
+		}
+	}
+	
+	cout << '\n';
+
+	print_vector(fruits);
 }
