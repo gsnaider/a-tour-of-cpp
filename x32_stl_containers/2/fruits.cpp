@@ -10,6 +10,13 @@ using std::string;
 using std::getline;
 using std::istringstream;
 
+void duplicate(vector<string>& v)
+// not the way to do it
+{
+	for (auto p = v.begin(); p!=v.end(); ++p)
+		v.insert(p,*p);
+}
+
 void print_vector(const vector<string>& v) {
 	cout << "Vector: [";
 	if (v.size() > 0) {
