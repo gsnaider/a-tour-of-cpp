@@ -1,0 +1,53 @@
+template<typename T>
+	equivalent to template<class T>
+
+begin() and end() functions
+	for supporting the range-for loop
+
+	template<typename T>
+	T* begin(Vector<T>& x) {
+		// return pointer to first element.
+	}
+
+	template<typename T>
+	T* begin(Vector<T>& x) {
+		// return pointer to one-past-last element.
+	}
+
+
+Templates are checked on compile-time. On run-time, they are the same as non-template versions.
+
+Templates can take value arguments
+	template<typename T, int N>
+
+Function objects 
+	objects that can be called like functions
+	implement the operator()
+
+Lambda expressions
+	[&](int a){return a < x}
+
+	Possible capture lists
+	[&]: local names (i.e. x) accessed through references
+	[&x]: only capure x (by refernece).
+	[=]: local names (i.e. x) used by value
+	[=x]: only capure x (by value).
+	[]: capture nothing
+
+Variadic templates
+	receive arbitrary number of arguments of arbitrary types
+	
+	template<typename T, typename... Tail>
+
+Aliases
+	Synonym for a type or template.
+	
+	using size_t = unsigned int;
+	using value_type = T;
+
+
+Questions
+
+Are operations on template types checked on conpile time?
+Or if the operation for a specific type does not exist, will it fail at runtime?
+	i.e. try to sum T + 1 when operator+ is not specified for T.
