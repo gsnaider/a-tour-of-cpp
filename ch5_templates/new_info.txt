@@ -1,6 +1,11 @@
 template<typename T>
 	equivalent to template<class T>
 
+template <typename T>
+class myclass {
+
+}
+
 begin() and end() functions
 	for supporting the range-for loop
 
@@ -14,6 +19,15 @@ begin() and end() functions
 		// return pointer to one-past-last element.
 	}
 
+
+function template arguments need to be explicitily mentioned only if it cannot be deduced or if there is no default.
+If all function template arguments are defaulted, the <> can be ommited
+E.g:
+	
+	template<typename Target=string, typename Source=string>
+	Target to(Source arg) {...}
+
+	auto x = to(1.2); // Target defaulted to string, Source is deduced to double
 
 Templates are checked on compile-time. On run-time, they are the same as non-template versions.
 

@@ -1,0 +1,27 @@
+Strings have move constructor
+	ok to  return from function
+
+Strings are mutable
+
+Operations:
+	+ : concatenate strings
+	+= : append to end of string
+	[] or at() : access char
+	substr() : get substring (another string as copy of the substring)
+	replace() : replace substring with value
+		can be different size
+	== : compare
+
+
+Regex
+	In <regex>
+	class std::regex
+
+	Operations:
+		regex_match()
+		regex_search()
+		regex_replace()
+		regex_iterator
+		regex_token_iterator
+		
+		

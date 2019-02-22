@@ -1,0 +1,42 @@
+facilities provided by standard library:
+
+	run-time languaje support
+	C standard library
+	Strings
+	Regular expressions
+	I/O streams
+	Containers
+	Algorithtms
+	Numerical computation
+	Concurrent programming
+	Template and generic programming
+	Smart pointers
+	Special purpose containers
+
+Standard library headers:
+	<algorithm>
+	<array>
+	<chrono>
+	<cmath>
+	<complex>
+	<forward_list>
+	<fstream>
+	<future>
+	<ios>
+	<iostream>
+	<map>
+	<memory>
+	<random>
+	<regex>
+	<string>
+	<set>
+	<sstream>
+	<stdexcept>
+	<thread>
+	<unordered_map>
+	<utility>
+	<vector>
+
+
+Headers from C standard library (e.g. <stdlib.h>) provided with preceding 'c' and without the '.h' (e.g. as <cstdlib>)
+

@@ -1,0 +1,74 @@
+operator << ("put to")
+	output operator on objects of type ostream
+
+operator >> ("get from")
+	input operator from objects of type istream
+
+cin: standard input stream
+cout: standard output stream
+cerr: standard error stream
+
+int b = 'B' // char converted to int
+cout << b
+	prints 66
+
+rigth hand side of >> determines what input is valid, and the target of the operation
+
+default: whitespace char (space or newline) ends read
+
+getline() : read whole line
+
+char c;
+is.get(c); // can read whitespace char 
+
+is >> i returns reference to is
+testing an iostream yields true if the stream is ready for another operation
+
+	if (is>>c) === "did we succeed at reading from is into c?"
+
+I/O of user defined types:
+	
+	ostream& operator<<(ostream& os, const Entry& e) {
+		// return os << 'string representing e'; 
+	}
+
+	istream& operator>>(istream& is, Entry& e) {
+		// Read from is and assing values to e;
+		// return is
+
+	}
+
+Formatting:
+	<ios>
+	<istream>
+	<ostream>
+	<iomanip> (manipulators that take arguments)
+
+	cout << 1234 << ',' << hex << 1234 << ',' << oct << 1234 << '\n';
+
+	double d;
+	cout << d << ';' << scientific << d << ';' << hexfloat << d << ';' << defaultfloat << d << '\n';
+
+	cout.precision(n) // set n digits of precision
+
+File streams
+	<fstream>
+		ifstream: reading
+		ofstream: writing
+		fstream: reading and writing
+
+	ofstream ofs("target");
+	if(!ofs) error("error opening file for writing");
+
+	idem for ifstream
+
+	afterwards, they are the same as regular streams
+
+String streams
+	<sstream>
+		istringstream: reading
+		ostringstream: writing
+		stringstream: reading and writing
+
+	ostringstream.str() : get the resulting string
+	
