@@ -64,6 +64,8 @@ File streams
 
 	afterwards, they are the same as regular streams
 
+	don't try to copy a file stream!
+
 String streams
 	<sstream>
 		istringstream: reading
@@ -71,4 +73,3 @@ String streams
 		stringstream: reading and writing
 
 	ostringstream.str() : get the resulting string
-	
